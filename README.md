@@ -6,5 +6,5 @@
 - [x] Avatar
 - [x] BoxCount
 - [x] Dropdown
-- [] TextArea
+- [x] TextArea
 - [x] Status
