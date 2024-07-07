@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { fontSizes } from '@mtfu/tokens'
 
-export const ComponentTest = styled.div`
+
+
+export const Button = styled.button`
     width: 100%;
     padding: 2rem;
     color: red;
-    font-size: ${fontSizes["2xl"]};
+    border: none;
+    border-radius: 1rem;
+    font-size: ${fontSizes["md"]};
 `;

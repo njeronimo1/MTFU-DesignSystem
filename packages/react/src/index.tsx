@@ -1,6 +1,8 @@
-import { colors } from '@mtfu/tokens'
-import { ComponentTest } from './styles/index'
-
-export function App(){
-    return  <ComponentTest>Hello</ComponentTest>
-}
+export * from "./components/Button";
+export * from "./components/Input/Input";
+export * from "./components/Typografy/Typografy";
+export * from "./components/Dropdown/Dropdown";
+export * from "./components/Status/Status";
+export * from "./components/Avatar/Avatar";
+export * from "./components/BoxCount/BoxCount";
+export * from "./components/TextArea/TextArea";

@@ -1,10 +1,10 @@
 #Components
 
-- [] Text
-- [] Heading
-- [] Box
-- [] Button
-- [] TextInput
-- [] Avatar
-- [] BoxCount
-- [] Dropdown
+- [x] Typografy
+- [x] Button
+- [x] TextInput
+- [x] Avatar
+- [x] BoxCount
+- [x] Dropdown
+- [] TextArea
+- [x] Status
