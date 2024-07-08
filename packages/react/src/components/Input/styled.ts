@@ -15,6 +15,7 @@ export const ContainerInput = styled.div`
 
     span{
         font-size: 1rem; 
+        color: white;
         font-weight: 600;
     }
 
