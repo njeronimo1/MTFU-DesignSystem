@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ContainerInput, InputStyle } from "./styled";
 
 
@@ -6,15 +7,22 @@ export type InputProps = {
     onChange: (e:any) => void,
     placeholder: string,
     label: string,
+    type: string,
     errorMessage: string,
     optional: boolean,
-    variant: "search" | "text",
+    variant: "search" | "text" | "password",
     imgSearch: string;
-    
+    imagesPassword?: {
+        eyeClosed: string,
+        eyeOpen: string
+    }
 }
 
 
-export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch }: InputProps){
+export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type }: InputProps){
+
+    const [eyeOpen, setEyeOpen] = useState(false);
+
     return  (
         <ContainerInput>
             {label !== '' && (
@@ -25,6 +33,7 @@ export function Input({ variant, onChange, errorMessage, label, optional, placeh
                 <div className="input_search">
                     <img src={imgSearch} alt="search"/>
                     <InputStyle 
+                    type={type}
                     variant={variant} 
                     onChange={(e) => {onChange(e)}}
                     placeholder={placeholder}
@@ -34,10 +43,32 @@ export function Input({ variant, onChange, errorMessage, label, optional, placeh
 
             {variant == "text" && (
                 <InputStyle 
+                type={type}
                 variant={variant} 
                 onChange={(e) => {onChange(e)}}
                 placeholder={placeholder}
                 ></InputStyle>
+            )} 
+
+            {variant == "password" && (
+                <div className="input_password">
+                    <InputStyle 
+                    variant={variant} 
+                    type={!eyeOpen ? "password" : "text"}
+                    onChange={(e) => {onChange(e)}}
+                    placeholder={placeholder}
+
+                    ></InputStyle>
+
+                    {eyeOpen && (
+                        <img src={imagesPassword?.eyeOpen} alt="search" onClick={() => {setEyeOpen(false)}}/>
+                    )}
+
+                    {!eyeOpen && (
+                        <img src={imagesPassword?.eyeClosed} alt="search" onClick={() => {setEyeOpen(true)}}/>
+                    )}
+                    
+                </div>
             )} 
 
             {errorMessage && (

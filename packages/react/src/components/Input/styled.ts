@@ -2,7 +2,7 @@ import { colors, fontSizes, fontWeights } from "@mtfu/tokens";
 import styled from "styled-components";
 
 type InputStyle = {
-    variant: "search" | "text" 
+    variant: "search" | "text" | "password"
 }
 
 
@@ -30,6 +30,33 @@ export const ContainerInput = styled.div`
         }
     }
 
+    .input_password{
+        display: flex;
+        position: relative;
+
+        input{
+            width: 100%;
+        }
+
+        img{
+            color: white;
+            position: absolute;
+            top: 0.875rem;
+            right: 1rem;
+
+            cursor: pointer;
+            transition: 0.2 opacity;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        svg{
+            color: white;
+        }
+    }
+
     label{
         color: #d91636;
         font-weight: 600;
@@ -52,7 +79,11 @@ export const InputStyle = styled.input<InputStyle>`
     font-family: 'Inter';
     transition: opacity;
 
+    &:active{
+        outline: 1px solid ${colors.mtfu};
+    }
+
     &:focus{
-        outline: none
+        outline: 1px solid ${colors.mtfu};
     }
 `;

@@ -3,6 +3,8 @@ import { fontSizes, fontWeights, colors } from '@mtfu/tokens';
 
 export type ButtonProps = {
     children: string,
+    textAlign: string,
+    radius: string,
     variant: "normal" | "link" | "filter-active" | "filter-desactive" 
 }
 
@@ -13,7 +15,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
     display: flex;
     font-weight: ${fontWeights.bold};
     justify-content: space-between;
-    border-radius: ${(props) => props.variant == "normal" ? "12px" : props.variant == "link" ? "24px" : "12px" };
+    border-radius: ${(props) => `${props.radius}px`};
     font-size: ${fontSizes["md"]};
     background-color: ${(props) => props.variant == "filter-desactive" ? `${colors.gray200}` : `${colors.mtfu}` } ;
     color: ${(props) => props.variant == "filter-desactive" ? `${colors.gray800}` : `${colors.white}` };
@@ -22,6 +24,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
     cursor: pointer;
 
     transition: opacity;
+    text-align: ${(props) => props.textAlign};
 
     &:hover{
         opacity: 0.8;
@@ -33,18 +36,18 @@ export const ButtonStyle = styled.button<ButtonProps>`
     
 `;
 
-export function Button({ children, variant }: ButtonProps){
+export function Button({ children, variant, textAlign, radius }: ButtonProps){
      
     if(variant == "link"){
         return (
-            <ButtonStyle variant={variant}>
+            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}>
                 {children}
             </ButtonStyle>
         )
     }
 
     return  (
-        <ButtonStyle variant={variant}>
+        <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}>
             {children}
         </ButtonStyle>
     )
