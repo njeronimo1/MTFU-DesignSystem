@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 3.1.0
+
+### Minor Changes
+
+- Ajuste no style do button
+
 ## 3.0.0
 
 ### Major Changes

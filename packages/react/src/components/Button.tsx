@@ -12,9 +12,11 @@ export const ButtonStyle = styled.button<ButtonProps>`
     padding: ${(props) => props.variant == "normal" ? "0.5rem 1rem" : props.variant == "link" ? "1rem 1.25rem"  : "0.15rem 1rem" };
     min-width: ${(props) => props.variant == "link" ? "10rem" : ""};
     border: none;
+    /* width: 100%; */
     display: flex;
+    align-items: center;
     font-weight: ${fontWeights.bold};
-    justify-content: space-between;
+    justify-content:${(props) => props.variant == "link" ? `space-beetwen` : `center` };
     border-radius: ${(props) => `${props.radius}px`};
     font-size: ${fontSizes["md"]};
     background-color: ${(props) => props.variant == "filter-desactive" ? `${colors.gray200}` : `${colors.mtfu}` } ;
