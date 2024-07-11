@@ -5,8 +5,8 @@ import { colors } from "@mtfu/tokens";
 export const AvatarContainer = styled(Avatar.Root)`
     border-radius: 50%;
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     overflow: hidden;
 
 `
@@ -28,7 +28,7 @@ export const AvatarFallback = styled(Avatar.Fallback)`
     color: ${colors.gray700};
 
     svg{
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 2rem;
+        height: 2rem;
     }
 `
