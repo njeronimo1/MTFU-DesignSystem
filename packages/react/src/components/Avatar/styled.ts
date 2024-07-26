@@ -5,8 +5,8 @@ import { colors } from "@mtfu/tokens";
 export const AvatarContainer = styled(Avatar.Root)`
     border-radius: 50%;
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     overflow: hidden;
 
 `

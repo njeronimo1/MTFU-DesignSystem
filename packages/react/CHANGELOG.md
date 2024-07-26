@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 5.0.0
+
+### Major Changes
+
+- Avatar
+
 ## 4.0.0
 
 ### Major Changes
