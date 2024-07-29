@@ -26,6 +26,7 @@ export const ContainerTextArea = styled.div`
 
 export const TextAreaStyle = styled.textarea`
     min-height: 180;
+    max-height: 400;
     max-width: 100%;
     padding: 0.75rem;
     display: flex;
