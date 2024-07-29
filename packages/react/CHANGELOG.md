@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 5.1.0
+
+### Minor Changes
+
+- Input search
+
 ## 5.0.0
 
 ### Major Changes

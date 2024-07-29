@@ -6,7 +6,8 @@ type InputStyle = {
 }
 
 
-export const ContainerInput = styled.div`
+export const 
+ContainerInput = styled.div`
     box-sizing: border-box;
     display: flex;
     gap: 0.25rem;
@@ -22,8 +23,13 @@ export const ContainerInput = styled.div`
     .input_search{
         display: flex;
         background-color: white;
+        /* box-shadow: 1px 1px 1px black; */
         padding: 0.15rem 0.5rem;
         border-radius: 18px;
+
+        img{
+            width: 1.5rem;
+        }
 
         input{
             width: 100%;
@@ -74,16 +80,16 @@ export const InputStyle = styled.input<InputStyle>`
     font-size: ${fontSizes["sm"]};
     background-color: ${(props) => props.variant == "search" ? `transparent` : `${colors.gray800}` } ;
     color: ${(props) => props.variant == "search" ? `${colors.gray800}` : `${colors.white}` };
-    border: ${(props) => props.variant == "search" ? `` :  `1px solid ${colors.mtfu}` };
+    border: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
 
     font-family: 'Inter';
     transition: opacity;
 
     &:active{
-        outline: 1px solid ${colors.mtfu};
+        outline: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
     }
 
     &:focus{
-        outline: 1px solid ${colors.mtfu};
+        outline: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
     }
 `;
