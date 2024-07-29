@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 6.0.0
+
+### Major Changes
+
+- input
+
 ## 5.3.0
 
 ### Minor Changes

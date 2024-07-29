@@ -26,8 +26,11 @@ ContainerInput = styled.div`
         /* box-shadow: 1px 1px 1px black; */
         padding: 0.15rem 0.5rem;
         border-radius: 18px;
+        align-items: center;
 
         .img_search{
+            display: flex;
+            align-items: center;
             min-width: 1.5rem;
             /* background: red; */
 
