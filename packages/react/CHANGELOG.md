@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 7.0.0
+
+### Major Changes
+
+- alter background input
+
 ## 6.0.0
 
 ### Major Changes

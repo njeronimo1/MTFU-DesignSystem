@@ -6,8 +6,7 @@ type InputStyle = {
 }
 
 
-export const 
-ContainerInput = styled.div`
+export const ContainerInput = styled.div`
     box-sizing: border-box;
     display: flex;
     gap: 0.25rem;
@@ -86,7 +85,7 @@ export const InputStyle = styled.input<InputStyle>`
    
     border-radius: ${(props) => props.variant == "search" ? `18px` : `8px` };
     font-size: ${fontSizes["sm"]};
-    background-color: ${(props) => props.variant == "search" ? `transparent` : `${colors.gray800}` } ;
+    background-color: ${(props) => props.variant == "search" ? `transparent` : `transparent` } ;
     color: ${(props) => props.variant == "search" ? `${colors.gray800}` : `${colors.white}` };
     border: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
 
