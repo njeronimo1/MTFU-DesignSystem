@@ -31,7 +31,9 @@ export function Input({ variant, onChange, errorMessage, label, optional, placeh
 
             {variant == "search" && (
                 <div className="input_search">
-                    <img src={imgSearch} alt="search"/>
+                    <div className="img_search">
+                        <img src={imgSearch} alt="search"/>
+                    </div>
                     <InputStyle 
                     type={type}
                     variant={variant} 

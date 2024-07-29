@@ -27,8 +27,13 @@ ContainerInput = styled.div`
         padding: 0.15rem 0.5rem;
         border-radius: 18px;
 
-        img{
-            width: 1.5rem;
+        .img_search{
+            width: 2%;
+            /* background: red; */
+
+            img{
+                width: 100%;
+            }
         }
 
         input{
