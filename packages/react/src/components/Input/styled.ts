@@ -28,7 +28,7 @@ ContainerInput = styled.div`
         border-radius: 18px;
 
         .img_search{
-            width: 2%;
+            min-width: 1.5rem;
             /* background: red; */
 
             img{
