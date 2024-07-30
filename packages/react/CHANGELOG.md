@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 9.0.0
+
+### Major Changes
+
+- textarea
+
 ## 8.0.0
 
 ### Major Changes

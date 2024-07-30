@@ -35,7 +35,7 @@ export const TextAreaStyle = styled.textarea`
     border-radius: 8px;
     font-size: ${fontSizes["sm"]};
     
-    background-color: ${colors.gray800 } ;
+    background-color: transparent;
     color: ${colors.white} ;
     border: 1px solid ${colors.mtfu};
 
