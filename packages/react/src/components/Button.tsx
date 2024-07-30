@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ComponentProps, ElementType } from "react";
 import { fontSizes, fontWeights, colors } from '@mtfu/tokens';
 
 export type ButtonProps = {
@@ -38,11 +39,11 @@ export const ButtonStyle = styled.button<ButtonProps>`
     
 `;
 
-export function Button({ children, variant, textAlign, radius }: ButtonProps){
+export function Button({ children, variant, textAlign, radius }: ComponentProps<typeof ButtonStyle>){
      
     if(variant == "link"){
         return (
-            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}>
+            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} >
                 {children}
             </ButtonStyle>
         )

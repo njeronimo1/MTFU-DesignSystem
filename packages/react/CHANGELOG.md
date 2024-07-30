@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 10.0.0
+
+### Major Changes
+
+- button props
+
 ## 9.0.0
 
 ### Major Changes
