@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ContainerInput, InputStyle } from "./styled";
+import { ComponentProps } from "react";
 
 
-
-export type InputProps = {
+export interface InputProps extends ComponentProps<typeof InputStyle>{
     onChange: (e:any) => void,
     placeholder: string,
     label: string,
@@ -15,11 +15,12 @@ export type InputProps = {
     imagesPassword?: {
         eyeClosed: string,
         eyeOpen: string
-    }
+    };
+    register: string
 }
 
 
-export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type }: InputProps){
+export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, register, ...props }: InputProps){
 
     const [eyeOpen, setEyeOpen] = useState(false);
 
@@ -35,30 +36,45 @@ export function Input({ variant, onChange, errorMessage, label, optional, placeh
                         <img src={imgSearch} alt="search"/>
                     </div>
                     <InputStyle 
-                    type={type}
-                    variant={variant} 
-                    onChange={(e) => {onChange(e)}}
-                    placeholder={placeholder}
+                        type={type}
+                        disabled={props.disabled}
+                        id={props.id}
+                        name={props.name}
+                        variant={variant} 
+                        onChange={(e) => {onChange(e)}}
+                        placeholder={placeholder}
+                        style={props.style}
+                        {...props}
                     ></InputStyle>
                 </div>
             )}           
 
             {variant == "text" && (
                 <InputStyle 
-                type={type}
-                variant={variant} 
-                onChange={(e) => {onChange(e)}}
-                placeholder={placeholder}
+                    type={type}
+                        disabled={props.disabled}
+                        id={props.id}
+                        name={props.name}
+                        variant={variant} 
+                        onChange={(e) => {onChange(e)}}
+                        placeholder={placeholder}
+                        style={props.style}
+                        {...props}
                 ></InputStyle>
             )} 
 
             {variant == "password" && (
                 <div className="input_password">
                     <InputStyle 
-                    variant={variant} 
-                    type={!eyeOpen ? "password" : "text"}
-                    onChange={(e) => {onChange(e)}}
-                    placeholder={placeholder}
+                        type={type}
+                        disabled={props.disabled}
+                        id={props.id}
+                        name={props.name}
+                        variant={variant} 
+                        onChange={(e) => {onChange(e)}}
+                        placeholder={placeholder}
+                        style={props.style}
+                        {...props}
 
                     ></InputStyle>
 

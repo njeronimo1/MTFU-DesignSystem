@@ -1,8 +1,8 @@
+import { ComponentProps } from "react";
 import { ContainerTextArea, TextAreaStyle } from "./styled";
 
 
-
-export type TextAreaProps = {
+export interface TextAreaProps extends ComponentProps<typeof TextAreaStyle>{
     onChange: (e:any) => void,
     placeholder: string,
     label: string,
@@ -11,7 +11,7 @@ export type TextAreaProps = {
 }
 
 
-export function TextArea({ onChange, value, errorMessage, label, placeholder }: TextAreaProps){
+export function TextArea({ onChange, value, errorMessage, label, placeholder, ...props }: TextAreaProps){
     return  (
         <ContainerTextArea>
             {label !== '' && (
@@ -19,9 +19,10 @@ export function TextArea({ onChange, value, errorMessage, label, placeholder }: 
             )}
 
                 <TextAreaStyle 
-                value={value}
-                onChange={(e) => {onChange(e)}}
-                placeholder={placeholder}
+                    value={value}
+                    onChange={(e) => {onChange(e)}}
+                    placeholder={placeholder}
+                        {...props}
                 ></TextAreaStyle>
 
             {errorMessage && (

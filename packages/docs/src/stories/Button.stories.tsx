@@ -11,7 +11,7 @@ export const Primary: StoryObj<ButtonProps> = {
         children: "Primary",
         variant: 'normal',
         textAlign: 'center',
-        radius: "12"
+        radius: "4"
     }
 }
 
@@ -20,7 +20,7 @@ export const Link: StoryObj<ButtonProps> = {
         children: "Criar novo projeto",
         variant: 'link',
         textAlign: 'center',
-        radius: "12"
+        radius: "4"
     }
 }
 
@@ -29,7 +29,7 @@ export const FilterActive: StoryObj<ButtonProps> = {
         children: "Filtro ativo",
         variant: 'filter-active',
         textAlign: 'center',
-        radius: "12"
+        radius: "4"
     }
 }
 
@@ -38,7 +38,7 @@ export const FilterDesactive: StoryObj<ButtonProps> = {
         children: "Filtro desativado",
         variant: 'filter-desactive',
         textAlign: 'center',
-        radius: "12"
+        radius: "4"
     }
 }
 

@@ -41,8 +41,9 @@ export const TextAreaStyle = styled.textarea`
 
     font-family: 'Inter';
     transition: opacity;
+    /* color: black; */
 
     &:focus{
-        outline: none
+        outline: 1px solid ${colors.mtfu};
     }
 `

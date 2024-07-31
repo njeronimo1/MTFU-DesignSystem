@@ -26,31 +26,46 @@ export const ButtonStyle = styled.button<ButtonProps>`
     font-family: 'Inter';
     cursor: pointer;
 
-    transition: opacity;
+    transition: ease-in-out 0.1s  filter, ease-in 0.15s background-color, ease-in 0.3s outline;
     text-align: ${(props) => props.textAlign};
 
+
     &:hover{
-        opacity: 0.8;
+        /* filter: brightness(0.95); */
+        background-color:#7d13fd;
+        /* backdrop-filter: blur(100px); */
+        
+        /* outline: 0.01rem solid ${colors.mtfu}; */
+        /* opacity: 0.8; */
     }
 
     &:active{
-        opacity: 1
+        outline: 0.01rem solid #7d13fd;
+        filter: blur(0.5px);
+        /* filter: brightness(1.15); */
+    }
+
+    &:focus{
+        /* outline: 0.01rem solid #7d13fd; */
+        filter: blur(0.5px);
+        background-color:#410091;
+        /* filter: brightness(1.15); */
     }
     
 `;
 
-export function Button({ children, variant, textAlign, radius }: ComponentProps<typeof ButtonStyle>){
+export function Button({ children, variant, textAlign, radius, ...props }: ComponentProps<typeof ButtonStyle>){
      
     if(variant == "link"){
         return (
-            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} >
+            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} {...props}>
                 {children}
             </ButtonStyle>
         )
     }
 
     return  (
-        <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}>
+        <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} {...props}>
             {children}
         </ButtonStyle>
     )

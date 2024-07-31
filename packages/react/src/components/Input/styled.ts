@@ -1,7 +1,8 @@
 import { colors, fontSizes, fontWeights } from "@mtfu/tokens";
 import styled from "styled-components";
+import { ComponentProps } from "react";
 
-type InputStyle = {
+interface InputStyle {
     variant: "search" | "text" | "password"
 }
 

@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 10.1.0
+
+### Minor Changes
+
+- Alteração no hover do button, textarea e interação das propriedades nos inputs e button
+
 ## 10.0.0
 
 ### Major Changes
