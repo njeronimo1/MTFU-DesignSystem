@@ -2,12 +2,6 @@ import styled from "styled-components";
 import { ComponentProps, ElementType } from "react";
 import { fontSizes, fontWeights, colors } from '@mtfu/tokens';
 
-export type ButtonProps = {
-    children: string,
-    textAlign: string,
-    radius: string,
-    variant: "normal" | "link" | "filter-active" | "filter-desactive" 
-}
 
 export const ButtonStyle = styled.button<ButtonProps>`
     padding: ${(props) => props.variant == "normal" ? "0.5rem 1rem" : props.variant == "link" ? "1rem 1.25rem"  : "0.15rem 1rem" };
@@ -51,8 +45,22 @@ export const ButtonStyle = styled.button<ButtonProps>`
         background-color:#410091;
         /* filter: brightness(1.15); */
     }
+
+    &:disabled{
+        outline: 0.01rem solid #a0a0a0;
+        background-color: #707070;
+        color: #222222;
+    }
     
 `;
+
+export interface ButtonProps{
+    children: string,
+    textAlign: string,
+    radius: string,
+    variant: "normal" | "link" | "filter-active" | "filter-desactive" ,
+}
+
 
 export function Button({ children, variant, textAlign, radius, ...props }: ComponentProps<typeof ButtonStyle>){
      

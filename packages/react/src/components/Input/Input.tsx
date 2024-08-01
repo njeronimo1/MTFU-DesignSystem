@@ -16,11 +16,10 @@ export interface InputProps extends ComponentProps<typeof InputStyle>{
         eyeClosed: string,
         eyeOpen: string
     };
-    register: string
 }
 
 
-export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, register, ...props }: InputProps){
+export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, ...props }: InputProps){
 
     const [eyeOpen, setEyeOpen] = useState(false);
 

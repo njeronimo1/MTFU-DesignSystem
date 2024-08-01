@@ -1,5 +1,6 @@
 import { Button, ButtonProps } from '@mtfu/react'
 import type { StoryObj, Meta } from "@storybook/react"
+import { ComponentProps } from 'react'
 
 export default {
     title: "Form/Button",
@@ -11,8 +12,8 @@ export const Primary: StoryObj<ButtonProps> = {
         children: "Primary",
         variant: 'normal',
         textAlign: 'center',
-        radius: "4"
-    }
+        radius: "4",
+    },
 }
 
 export const Link: StoryObj<ButtonProps> = {

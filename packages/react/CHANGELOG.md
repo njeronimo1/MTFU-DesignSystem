@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 11.0.0
+
+### Major Changes
+
+- alters
+
 ## 10.1.0
 
 ### Minor Changes
