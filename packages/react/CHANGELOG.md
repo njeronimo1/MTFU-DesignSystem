@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.2.0
+
+### Minor Changes
+
+- onchange
+
 ## 12.1.0
 
 ### Minor Changes

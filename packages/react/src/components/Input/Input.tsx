@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 
 
 export interface InputProps extends ComponentProps<typeof InputStyle>{
-    onChange: (e:any) => void,
+    onChangeFunction: (e:any) => void,
     placeholder: string,
     label: string,
     type: string,
@@ -18,7 +18,7 @@ export interface InputProps extends ComponentProps<typeof InputStyle>{
     };
 }
 
-export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, onChange, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
+export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, onChangeFunction, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
     const [eyeOpen, setEyeOpen] = useState(false);
     
     return(
@@ -38,7 +38,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChange(e)}}
+                        onChange={(e) => {onChangeFunction(e)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -53,7 +53,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChange(e)}}
+                        onChange={(e) => {onChangeFunction(e)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -68,7 +68,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChange(e)}}
+                        onChange={(e) => {onChangeFunction(e)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
