@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ElementRef, forwardRef, useState } from "react";
 import { ContainerInput, InputStyle } from "./styled";
 import { ComponentProps } from "react";
 
@@ -18,12 +18,10 @@ export interface InputProps extends ComponentProps<typeof InputStyle>{
     };
 }
 
-
-export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, ...props }: InputProps){
-
+export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, onChange, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
     const [eyeOpen, setEyeOpen] = useState(false);
-
-    return  (
+    
+    return(
         <ContainerInput>
             {label !== '' && (
                 <span>{label}</span>
@@ -95,6 +93,16 @@ export function Input({ variant, onChange, errorMessage, label, optional, placeh
 
             
         </ContainerInput>
-        
     )
-}
+})
+
+// forwardRef<ElementRef<typeof Input>, TextInputProps>
+// export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, ...props }: ){
+
+    
+
+//     return  (
+        
+        
+//     )
+// }
