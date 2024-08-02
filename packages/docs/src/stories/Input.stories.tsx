@@ -25,7 +25,8 @@ export const Text: StoryObj<InputProps> = {
         type: 'text',
         label: 'Titulo',
         optional: true,
-        placeholder: 'Prencha aqui...'
+        placeholder: 'Prencha aqui...',
+        onChangeFunction: (e) => {console.log(e)}
     }
 }
 

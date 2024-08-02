@@ -38,7 +38,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChangeFunction(e)}}
+                        onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -53,7 +53,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChangeFunction(e)}}
+                        onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -68,7 +68,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        onChange={(e) => {onChangeFunction(e)}}
+                        onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
