@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.5.0
+
+### Minor Changes
+
+- inpt
+
 ## 12.4.0
 
 ### Minor Changes
