@@ -4,6 +4,7 @@ import { ComponentProps } from "react";
 
 
 export interface InputProps extends ComponentProps<typeof InputStyle>{
+    valueText: string,
     onChangeFunction: (e:any) => void,
     placeholder: string,
     label: string,
@@ -18,7 +19,7 @@ export interface InputProps extends ComponentProps<typeof InputStyle>{
     };
 }
 
-export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, onChangeFunction, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
+export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, valueText, onChangeFunction, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
     const [eyeOpen, setEyeOpen] = useState(false);
     
     return(
@@ -38,6 +39,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
+                        value={valueText}
                         onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
@@ -53,6 +55,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
+                        value={valueText}
                         onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
@@ -68,6 +71,7 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
+                        value={valueText}
                         onChange={(e) => {onChangeFunction(e.target.value)}}
                         placeholder={placeholder}
                         style={props.style}
