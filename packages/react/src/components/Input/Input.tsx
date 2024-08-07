@@ -4,8 +4,8 @@ import { ComponentProps } from "react";
 
 
 export interface InputProps extends ComponentProps<typeof InputStyle>{
-    valueText: string,
-    onChangeFunction: (e:any) => void,
+    valueText?: string,
+    onChangeFunction?: (e:any) => void,
     placeholder: string,
     label: string,
     type: string,

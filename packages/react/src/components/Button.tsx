@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ComponentProps, ElementType } from "react";
 import { fontSizes, fontWeights, colors } from '@mtfu/tokens';
-import { CircleNotch } from "phosphor-react";
 
 
 export const ButtonStyle = styled.button<ButtonProps>`
@@ -23,9 +22,6 @@ export const ButtonStyle = styled.button<ButtonProps>`
 
     transition: ease-in-out 0.1s  filter, ease-in 0.15s background-color, ease-in 0.3s outline;
     text-align: ${(props) => props.textAlign};
-    filter: ${(props) => props.state == "disabled" || props.state == "loading" ? "opacity: 0.4;" : "brightness(1)"};
-
-    
 
     &:hover{
         /* filter: brightness(0.95); */
