@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.6.0
+
+### Minor Changes
+
+- button loading
+
 ## 12.5.0
 
 ### Minor Changes

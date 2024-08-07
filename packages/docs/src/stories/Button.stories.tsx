@@ -43,3 +43,13 @@ export const FilterDesactive: StoryObj<ButtonProps> = {
     }
 }
 
+export const DisabledPrimary: StoryObj<ButtonProps> = {
+    args:{
+        children: "Primary",
+        variant: 'normal',
+        textAlign: 'center',
+        radius: "4",
+        state: "disabled",
+        disabled: true
+    },
+}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ComponentProps, ElementType } from "react";
 import { fontSizes, fontWeights, colors } from '@mtfu/tokens';
+import { CircleNotch } from "phosphor-react";
 
 
 export const ButtonStyle = styled.button<ButtonProps>`
@@ -22,7 +23,9 @@ export const ButtonStyle = styled.button<ButtonProps>`
 
     transition: ease-in-out 0.1s  filter, ease-in 0.15s background-color, ease-in 0.3s outline;
     text-align: ${(props) => props.textAlign};
+    filter: ${(props) => props.state == "disabled" || props.state == "loading" ? "opacity: 0.4;" : "brightness(1)"};
 
+    
 
     &:hover{
         /* filter: brightness(0.95); */
@@ -47,15 +50,17 @@ export const ButtonStyle = styled.button<ButtonProps>`
     }
 
     &:disabled{
-        outline: 0.01rem solid #a0a0a0;
-        background-color: #707070;
-        color: #222222;
+        /* outline: 0.01rem solid #a0a0a0; */
+        /* background-color: #707070; */
+        /* color: #222222; */
+        cursor: not-allowed;
+        opacity: 0.45;
     }
     
 `;
 
 export interface ButtonProps{
-    children: string,
+    children: JSX.Element,
     textAlign: string,
     radius: string,
     variant: "normal" | "link" | "filter-active" | "filter-desactive" ,
@@ -66,14 +71,14 @@ export function Button({ children, variant, textAlign, radius, ...props }: Compo
      
     if(variant == "link"){
         return (
-            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} {...props}>
+            <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}  {...props}>
                 {children}
             </ButtonStyle>
         )
     }
 
     return  (
-        <ButtonStyle variant={variant} textAlign={textAlign} radius={radius} {...props}>
+        <ButtonStyle variant={variant} textAlign={textAlign} radius={radius}  {...props}>
             {children}
         </ButtonStyle>
     )

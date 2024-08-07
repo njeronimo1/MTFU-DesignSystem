@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { ComponentProps } from "react";
 
 interface InputStyle {
-    variant: "search" | "text" | "password"
+    variant: "search" | "text" | "password",
+    
 }
 
 
