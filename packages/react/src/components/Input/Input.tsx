@@ -1,27 +1,24 @@
-import { ElementRef, forwardRef, useState } from "react";
+import { ElementRef, forwardRef, useEffect, useState } from "react";
 import { ContainerInput, InputStyle } from "./styled";
 import { ComponentProps } from "react";
 
 
 export interface InputProps extends ComponentProps<typeof InputStyle>{
-    valueText?: string,
-    onChangeFunction?: (e:any) => void,
     placeholder: string,
     label: string,
-    type: string,
     errorMessage: string,
     optional: boolean,
     variant: "search" | "text" | "password",
-    imgSearch: string;
+    imgSearch?: string;
     imagesPassword?: {
         eyeClosed: string,
         eyeOpen: string
     };
 }
 
-export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, valueText, onChangeFunction, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
+export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({label, variant, imgSearch, type, placeholder, imagesPassword, errorMessage, ...props} : InputProps, ref) => {
     const [eyeOpen, setEyeOpen] = useState(false);
-    
+
     return(
         <ContainerInput>
             {label !== '' && (
@@ -39,8 +36,6 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        value={valueText}
-                        onChange={onChangeFunction}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -55,8 +50,6 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        value={valueText}
-                        onChange={onChangeFunction}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -66,13 +59,11 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
             {variant == "password" && (
                 <div className="input_password">
                     <InputStyle 
-                        type={type}
+                        type={eyeOpen ? "text" : "password"}
                         disabled={props.disabled}
                         id={props.id}
                         name={props.name}
                         variant={variant} 
-                        value={valueText}
-                        onChange={onChangeFunction}
                         placeholder={placeholder}
                         style={props.style}
                         {...props}
@@ -80,11 +71,11 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
                     ></InputStyle>
 
                     {eyeOpen && (
-                        <img src={imagesPassword?.eyeOpen} alt="search" onClick={() => {setEyeOpen(false)}}/>
+                        <img src={imagesPassword?.eyeOpen} alt="Olho aberto" onClick={() => {setEyeOpen(false)}}/>
                     )}
 
                     {!eyeOpen && (
-                        <img src={imagesPassword?.eyeClosed} alt="search" onClick={() => {setEyeOpen(true)}}/>
+                        <img src={imagesPassword?.eyeClosed} alt="Olho fechado" onClick={() => {setEyeOpen(true)}}/>
                     )}
                     
                 </div>
@@ -99,14 +90,3 @@ export const Input = forwardRef<ElementRef<typeof InputStyle>, InputProps>(({lab
         </ContainerInput>
     )
 })
-
-// forwardRef<ElementRef<typeof Input>, TextInputProps>
-// export function Input({ variant, onChange, errorMessage, label, optional, placeholder, imgSearch, imagesPassword, type, ...props }: ){
-
-    
-
-//     return  (
-        
-        
-//     )
-// }

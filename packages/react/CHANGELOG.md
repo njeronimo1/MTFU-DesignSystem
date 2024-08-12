@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.8.0
+
+### Minor Changes
+
+- ultimos ajustes
+
 ## 12.7.0
 
 ### Minor Changes

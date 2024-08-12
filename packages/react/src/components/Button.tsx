@@ -24,31 +24,20 @@ export const ButtonStyle = styled.button<ButtonProps>`
     text-align: ${(props) => props.textAlign};
 
     &:hover{
-        /* filter: brightness(0.95); */
         background-color:#7d13fd;
-        /* backdrop-filter: blur(100px); */
-        
-        /* outline: 0.01rem solid ${colors.mtfu}; */
-        /* opacity: 0.8; */
     }
 
     &:active{
         outline: 0.01rem solid #7d13fd;
         filter: blur(0.5px);
-        /* filter: brightness(1.15); */
     }
 
     &:focus{
-        /* outline: 0.01rem solid #7d13fd; */
         filter: blur(0.5px);
         background-color:#410091;
-        /* filter: brightness(1.15); */
     }
 
     &:disabled{
-        /* outline: 0.01rem solid #a0a0a0; */
-        /* background-color: #707070; */
-        /* color: #222222; */
         cursor: not-allowed;
         opacity: 0.45;
     }
@@ -59,7 +48,8 @@ export interface ButtonProps{
     children: JSX.Element,
     textAlign: string,
     radius: string,
-    variant: "normal" | "link" | "filter-active" | "filter-desactive" ,
+    variant: "normal" | "link" | "filter-active" | "filter-desactive",
+
 }
 
 
