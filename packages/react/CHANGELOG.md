@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.9.0
+
+### Minor Changes
+
+- input color
+
 ## 12.8.0
 
 ### Minor Changes
