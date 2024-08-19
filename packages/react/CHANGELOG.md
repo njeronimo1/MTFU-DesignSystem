@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.10.0
+
+### Minor Changes
+
+- Avatar
+
 ## 12.9.0
 
 ### Minor Changes
