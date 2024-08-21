@@ -11,6 +11,7 @@ export const ContainerTextArea = styled.div`
     font-family: 'Inter';
 
     span{
+        color: white;
         font-size: 1rem; 
         font-weight: 600;
     }

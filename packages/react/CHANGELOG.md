@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.11.0
+
+### Minor Changes
+
+- textArea
+
 ## 12.10.0
 
 ### Minor Changes
