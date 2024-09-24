@@ -1,5 +1,11 @@
 # @mtfu/react
 
+## 12.12.0
+
+### Minor Changes
+
+- Alteração no onclick do input de pesquisar
+
 ## 12.11.0
 
 ### Minor Changes

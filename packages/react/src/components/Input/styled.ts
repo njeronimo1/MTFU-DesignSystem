@@ -1,104 +1,118 @@
-import { colors, fontSizes, fontWeights } from "@mtfu/tokens";
-import styled from "styled-components";
-import { ComponentProps } from "react";
+import { colors, fontSizes, fontWeights } from '@mtfu/tokens'
+import styled from 'styled-components'
+import { ComponentProps } from 'react'
 
 interface InputStyle {
-    variant: "search" | "text" | "password",
-    
+  variant: 'search' | 'text' | 'password'
 }
 
-
 export const ContainerInput = styled.div`
-    box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  font-family: 'Inter';
+
+  span {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .input_search {
     display: flex;
-    gap: 0.25rem;
-    flex-direction: column;
-    font-family: 'Inter';
+    background-color: white;
+    /* box-shadow: 1px 1px 1px black; */
+    padding: 0.15rem 0.5rem;
+    border-radius: 18px;
+    align-items: center;
 
-    span{
-        font-size: 1rem; 
-        color: white;
-        font-weight: 600;
+    .img_search {
+      display: flex;
+      align-items: center;
+      min-width: 1.5rem;
+      cursor: pointer;
+      /* background: red; */
+      transition: 0.1s ease-in opacity;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+      }
     }
 
-    .input_search{
-        display: flex;
-        background-color: white;
-        /* box-shadow: 1px 1px 1px black; */
-        padding: 0.15rem 0.5rem;
-        border-radius: 18px;
-        align-items: center;
+    input {
+      width: 100%;
+    }
+  }
 
-        .img_search{
-            display: flex;
-            align-items: center;
-            min-width: 1.5rem;
-            /* background: red; */
+  .input_password {
+    display: flex;
+    position: relative;
 
-            img{
-                width: 100%;
-            }
-        }
-
-        input{
-            width: 100%;
-        }
+    input {
+      width: 100%;
     }
 
-    .input_password{
-        display: flex;
-        position: relative;
+    img {
+      color: white;
+      position: absolute;
+      top: 0.875rem;
+      right: 1rem;
 
-        input{
-            width: 100%;
-        }
+      cursor: pointer;
+      transition: 0.2 opacity;
 
-        img{
-            color: white;
-            position: absolute;
-            top: 0.875rem;
-            right: 1rem;
-
-            cursor: pointer;
-            transition: 0.2 opacity;
-
-            &:hover{
-                opacity: 0.8;
-            }
-        }
-
-        svg{
-            color: white;
-        }
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
-    label{
-        color: #d91636;
-        font-weight: 600;
-        padding: 0.15rem 1rem;
-        background-color: #ff8a9d;
+    svg {
+      color: white;
     }
+  }
+
+  label {
+    color: #d91636;
+    font-weight: 600;
+    padding: 0.15rem 1rem;
+    background-color: #ff8a9d;
+  }
 `
 
 export const InputStyle = styled.input<InputStyle>`
-    padding: ${(props) => props.variant == "search" ? `0.5rem 0.75rem` : `0.75rem` };
-    display: flex;
-    font-weight: ${fontWeights.regular};
-   
-    border-radius: ${(props) => props.variant == "search" ? `18px` : `8px` };
-    font-size: ${fontSizes["sm"]};
-    background-color: ${(props) => props.variant == "search" ? `transparent` : `transparent` } ;
-    color: ${(props) => props.variant == "search" ? `${colors.gray800}` : `${colors.white}` };
-    border: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
+  padding: ${(props) =>
+    props.variant == 'search' ? `0.5rem 0.75rem` : `0.75rem`};
+  display: flex;
+  font-weight: ${fontWeights.regular};
 
-    font-family: 'Inter';
-    transition: opacity;
+  border-radius: ${(props) => (props.variant == 'search' ? `18px` : `8px`)};
+  font-size: ${fontSizes.sm};
+  background-color: ${(props) =>
+    props.variant == 'search' ? `transparent` : `transparent`};
+  color: ${(props) =>
+    props.variant == 'search' ? `${colors.gray800}` : `${colors.white}`};
+  border: ${(props) =>
+    props.variant == 'search' ? `none` : `1px solid ${colors.mtfu}`};
 
-    &:active{
-        outline: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
-    }
+  font-family: 'Inter';
+  transition: opacity;
 
-    &:focus{
-        outline: ${(props) => props.variant == "search" ? `none` :  `1px solid ${colors.mtfu}` };
-    }
-`;
+  &:active {
+    outline: ${(props) =>
+      props.variant == 'search' ? `none` : `1px solid ${colors.mtfu}`};
+  }
+
+  &:focus {
+    outline: ${(props) =>
+      props.variant == 'search' ? `none` : `1px solid ${colors.mtfu}`};
+  }
+`
