@@ -36,7 +36,7 @@ Segue um padrão de espaçamento de bibliotecas front-end,
 ## Comandos para deploy
 
 npm run changeset
-npm run version-packages
+ 
 
 git add .
 git commit -m ""

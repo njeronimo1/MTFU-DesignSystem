@@ -1,10 +1,4 @@
-import {
-  ElementRef,
-  forwardRef,
-  useEffect,
-  useState,
-  ComponentProps,
-} from 'react'
+import { ElementRef, forwardRef, useState, ComponentProps } from 'react'
 import { ContainerInput, InputStyle } from './styled'
 
 export interface InputProps extends ComponentProps<typeof InputStyle> {
