@@ -1,0 +1,4 @@
+import{j as o}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as r}from"./index-DbIxU3Ed.js";import{M as e,U as i}from"./chunk-HLWAVYOI-016MAnL9.js";import{T as m}from"./TokensGrid-BQuqxst0.js";import{b as p}from"./index-BjVycn5Y.js";import"./index-l2PZgWEW.js";import"./iframe-Cuf_d-il.js";import"../sb-preview/runtime.js";import"./react-18-B2S7X9kl.js";import"./index-CaNG7YX3.js";import"./index-COn3-dgF.js";import"./index-DXimoRZY.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";function s(t){const n={h1:"h1",p:"p",...r(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(e,{title:"Tokens/Font Families"}),`
+`,o.jsx(n.h1,{id:"font-families",children:"Font Families"}),`
+`,o.jsx(n.p,{children:"Essas são as fontes do More than follow up."}),`
+`,o.jsx(i,{children:o.jsx(m,{tokens:p})})]})}function T(t={}){const{wrapper:n}={...r(),...t.components};return n?o.jsx(n,{...t,children:o.jsx(s,{...t})}):s(t)}export{T as default};

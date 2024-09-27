@@ -1,0 +1,4 @@
+import{j as o}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as n}from"./index-DbIxU3Ed.js";import{M as r,U as m}from"./chunk-HLWAVYOI-016MAnL9.js";import{T as i}from"./TokensGrid-BQuqxst0.js";import{s as p}from"./index-BjVycn5Y.js";import"./index-l2PZgWEW.js";import"./iframe-Cuf_d-il.js";import"../sb-preview/runtime.js";import"./react-18-B2S7X9kl.js";import"./index-CaNG7YX3.js";import"./index-COn3-dgF.js";import"./index-DXimoRZY.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";function e(t){const s={h1:"h1",p:"p",...n(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(r,{title:"Tokens/Spaces"}),`
+`,o.jsx(s.h1,{id:"spaces",children:"Spaces"}),`
+`,o.jsx(s.p,{children:"Esses são os espaçamentos do More than follow up."}),`
+`,o.jsx(m,{children:o.jsx(i,{tokens:p,hasRemValue:!0})})]})}function X(t={}){const{wrapper:s}={...n(),...t.components};return s?o.jsx(s,{...t,children:o.jsx(e,{...t})}):e(t)}export{X as default};

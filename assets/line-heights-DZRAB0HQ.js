@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as s}from"./index-DbIxU3Ed.js";import{M as i,U as r}from"./chunk-HLWAVYOI-016MAnL9.js";import{T as m}from"./TokensGrid-BQuqxst0.js";import{l as p}from"./index-BjVycn5Y.js";import"./index-l2PZgWEW.js";import"./iframe-Cuf_d-il.js";import"../sb-preview/runtime.js";import"./react-18-B2S7X9kl.js";import"./index-CaNG7YX3.js";import"./index-COn3-dgF.js";import"./index-DXimoRZY.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";function e(o){const n={h1:"h1",p:"p",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Tokens/LineHeights"}),`
+`,t.jsx(n.h1,{id:"lineheights",children:"LineHeights"}),`
+`,t.jsx(n.p,{children:"Esses são os tamanhos de LineHeights do More than follow up."}),`
+`,t.jsx(r,{children:t.jsx(m,{tokens:p})})]})}function C(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{C as default};

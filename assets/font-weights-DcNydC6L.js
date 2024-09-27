@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as e}from"./index-DbIxU3Ed.js";import{M as r,U as i}from"./chunk-HLWAVYOI-016MAnL9.js";import{T as m}from"./TokensGrid-BQuqxst0.js";import{a as p}from"./index-BjVycn5Y.js";import"./index-l2PZgWEW.js";import"./iframe-Cuf_d-il.js";import"../sb-preview/runtime.js";import"./react-18-B2S7X9kl.js";import"./index-CaNG7YX3.js";import"./index-COn3-dgF.js";import"./index-DXimoRZY.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";function s(o){const n={h1:"h1",p:"p",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/FontWeights"}),`
+`,t.jsx(n.h1,{id:"font-weights",children:"Font weights"}),`
+`,t.jsx(n.p,{children:"Esses são os font weights do More than follow up."}),`
+`,t.jsx(i,{children:t.jsx(m,{tokens:p})})]})}function D(o={}){const{wrapper:n}={...e(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(s,{...o})}):s(o)}export{D as default};
